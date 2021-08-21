@@ -19,12 +19,12 @@ Employee #3 data:\
 Outsourced (y/n)? n\
 Name: Marta\
 Hours: 60\
-Value per hour: 20.00\
+Value per hour: 20.00
 
 PAYMENTS:\
 Martin - $ 1000.00\
 Daniel - $ 1720.00\
-Marta - $ 1200.0\
+Marta - $ 1200.0
 
 ## Working with Polymorphism V1
 
