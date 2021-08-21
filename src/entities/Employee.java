@@ -1,10 +1,15 @@
 package entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Employee {
 		
 	private String name;
 		protected Integer hours;
 		protected Double valuePerHour;
+		
+		List<Employee> employee = new ArrayList<>();
 		
 		public Employee() {
 		}
@@ -39,8 +44,25 @@ public class Employee {
 			this.valuePerHour = valuePerHour;
 		}
 		
+		public void addEmployee(Employee e) {
+			employee.add(e);
+		}
+		
+		public void removeEmployee(Employee e) {
+			employee.remove(e);
+		}
+		
 		public double payment() {
 			return valuePerHour * hours;
+		}
+		
+		public String toString() {
+			StringBuilder sb = new StringBuilder();
+			System.out.println("PAYMENTS: ");
+			for (Employee e : employee) {
+				System.out.println(e.getName() + " - " + " $ " + e.payment());
+			}
+			return sb.toString();
 		}
 		
 }

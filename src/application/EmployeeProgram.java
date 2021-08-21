@@ -1,7 +1,5 @@
 package application;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -15,7 +13,7 @@ public class EmployeeProgram {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		List<Employee>employee = new ArrayList<>();
+		Employee employee = new Employee();
 		
 		System.out.print("Enter the number of employees: ");
 		int n = sc.nextInt();
@@ -36,21 +34,17 @@ public class EmployeeProgram {
 				System.out.print("Additional charge: ");
 				double additionalCharge = sc.nextDouble();
 				Employee emp = new OutsorcedEmployee(name, hours, valuePerHour, additionalCharge);
-				employee.add(emp);
+				employee.addEmployee(emp);
 			}
 			else {
 				Employee emp = new Employee(name, hours, valuePerHour);
-				employee.add(emp);
+				employee.addEmployee(emp);
 			}
 		}
 		
 		System.out.println();
 		
-		System.out.println("PAYMENTS:");
-		
-		for(Employee e : employee) {
-			System.out.println(e.getName() + " - $ " + e.payment() );
-		}
+		System.out.println(employee);
 		
 		
 		sc.close();

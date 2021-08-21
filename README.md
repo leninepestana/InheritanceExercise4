@@ -32,3 +32,8 @@ In this version, the Employees list is
 created in the EmployeeProgram class and 
 we run through the list directly in the 
 EmployeeProgram, the main class.
+
+## Working with Polymorphism V2
+
+In this version we have created the Employees list diretly on the
+Employee class. From the main class We call the object employee to return the employees list
